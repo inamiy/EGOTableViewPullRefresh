@@ -41,9 +41,8 @@
 		
 	}
 	
-	//  update the last update date
-	[_refreshHeaderView refreshLastUpdatedDate];
-
+    //_refreshHeaderView.secondLabel.text = [NSString stringWithFormat:@"%@",[NSDate date]];
+    _refreshHeaderView.secondLabel.text = @"Any text you want here!";
 	
 }
 
