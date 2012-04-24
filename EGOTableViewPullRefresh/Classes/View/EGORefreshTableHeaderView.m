@@ -70,9 +70,10 @@
 		[self addSubview:label];
 		_statusLabel=label;
 		[label release];
-		
+        
+		CGSize layerSize = [UIImage imageNamed:arrow].size;
 		CALayer *layer = [CALayer layer];
-		layer.frame = CGRectMake(25.0f, frame.size.height - 65.0f, 30.0f, 55.0f);
+		layer.frame = CGRectMake(25.0f, frame.size.height - layerSize.height - 10.0f, layerSize.width, layerSize.height);
 		layer.contentsGravity = kCAGravityResizeAspect;
 		layer.contents = (id)[UIImage imageNamed:arrow].CGImage;
 		
