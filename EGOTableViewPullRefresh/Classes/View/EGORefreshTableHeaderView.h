@@ -51,6 +51,8 @@ typedef enum{
 
 @property(nonatomic,retain,readonly) UILabel *secondLabel;
 
+@property(nonatomic) CGFloat defaultContentInsetTop;
+
 - (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor;
 
 - (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView;
