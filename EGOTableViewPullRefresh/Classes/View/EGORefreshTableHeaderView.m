@@ -162,6 +162,8 @@
 
 - (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView {	
 	
+    if (self.hidden) return;
+    
 	if (_state == EGOOPullRefreshLoading) {
 		
 		CGFloat offset = MAX(scrollView.contentOffset.y * -1, 0);
@@ -191,6 +193,8 @@
 
 - (void)egoRefreshScrollViewDidEndDragging:(UIScrollView *)scrollView {
 	
+    if (self.hidden) return;
+    
 	BOOL _loading = NO;
 	if ([_delegate respondsToSelector:@selector(egoRefreshTableHeaderDataSourceIsLoading:)]) {
 		_loading = [_delegate egoRefreshTableHeaderDataSourceIsLoading:self];
@@ -214,6 +218,8 @@
 
 - (void)egoRefreshScrollViewDataSourceDidFinishedLoading:(UIScrollView *)scrollView {	
 	
+    if (self.hidden) return;
+    
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:.3];
 	[scrollView setContentInset:UIEdgeInsetsMake(self.defaultContentInsetTop, 0.0f, 0.0f, 0.0f)];
