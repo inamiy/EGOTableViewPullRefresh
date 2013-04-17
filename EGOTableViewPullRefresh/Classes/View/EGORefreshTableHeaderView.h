@@ -53,6 +53,8 @@ typedef enum{
 
 @property(nonatomic) CGFloat defaultContentInsetTop;
 
+@property(nonatomic, readonly) EGOPullRefreshState state;
+
 - (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor;
 
 - (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView;
